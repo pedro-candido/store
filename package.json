@@ -45,6 +45,7 @@
     "@react-native-async-storage/async-storage": "^1.23.1",
     "@react-native-community/datetimepicker": "^8.1.1",
     "@react-native-community/slider": "^4.5.2",
+    "@react-navigation/stack": "^6.4.0",
     "@storybook/addon-ondevice-actions": "^7.6.20",
     "@storybook/addon-ondevice-controls": "^7.6.20",
     "@storybook/react-native": "^7.6.20",

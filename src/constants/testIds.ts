@@ -1,4 +1,6 @@
-export const testIds = {
+const testIds = {
   addToCartButton: 'add-to-cart-button',
   removeFromCartButton: 'remove-from-cart-button'
 }
+
+export { testIds }

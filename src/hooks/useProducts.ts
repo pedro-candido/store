@@ -2,7 +2,7 @@ import { IUseProducts } from '@hooks/hooks.types';
 import { api } from '@/api';
 import { AxiosResponse } from 'axios'
 
-export default function useProducts(): IUseProducts{
+function useProducts(): IUseProducts{
   async function getProducts() {
     return await api.get("/products")
   }
@@ -31,3 +31,5 @@ export default function useProducts(): IUseProducts{
     getProductsFromACategory
   }
 }
+
+export default useProducts
