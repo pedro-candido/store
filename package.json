@@ -3,12 +3,17 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "expo start --dev-client",
     "android": "expo run:android",
-    "ios": "expo run:ios",
-    "web": "expo start --web",
+    "commit": "cz",
     "clean:node_modules": "find . -name 'node_modules' -type d -prune -exec rm -rf '{}' + && yarn",
-    "storybook-generate": "sb-rn-get-stories"
+    "ios": "expo run:ios",
+    "start": "expo start --dev-client",
+    "storybook-generate": "sb-rn-get-stories",
+    "web": "expo start --web",
+    "lint": "eslint .",
+    "lintFixAll":"eslint 'src/**/*.{js,jsx}'",
+    "prettierFixAll":"prettier --write 'src/**/*.{js,jsx}'",
+    "fix:lintPrettier":"yarn prettierFixAll && yarn lintFixAll"
   },
   "dependencies": {
     "@react-navigation/native": "^6.1.17",
@@ -32,6 +37,8 @@
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
+    "@eslint/compat": "^1.1.0",
+    "@eslint/js": "^9.6.0",
     "@react-native-async-storage/async-storage": "^1.23.1",
     "@react-native-community/datetimepicker": "^8.1.1",
     "@react-native-community/slider": "^4.5.2",
@@ -39,8 +46,21 @@
     "@storybook/addon-ondevice-controls": "^7.6.20",
     "@storybook/react-native": "^7.6.20",
     "babel-loader": "^8.3.0",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "8.x",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-react": "^7.34.3",
+    "eslint-plugin-react-native": "^4.1.0",
+    "globals": "^15.8.0",
+    "prettier": "^3.3.2",
     "react-dom": "18.2.0",
-    "typescript": "^5.5.3"
+    "typescript": "^5.5.3",
+    "typescript-eslint": "^7.16.0"
   },
-  "private": true
+  "private": true,
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
 }
