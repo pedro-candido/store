@@ -5,15 +5,19 @@
   "scripts": {
     "android": "expo run:android",
     "commit": "cz",
-    "clean:node_modules": "find . -name 'node_modules' -type d -prune -exec rm -rf '{}' + && yarn",
+    "clean:nm": "find . -name 'node_modules' -type d -prune -exec rm -rf '{}' + && yarn",
     "ios": "expo run:ios",
     "start": "expo start --dev-client",
     "storybook-generate": "sb-rn-get-stories",
     "web": "expo start --web",
     "lint": "eslint .",
-    "lintFixAll":"eslint 'src/**/*.{js,jsx}'",
-    "prettierFixAll":"prettier --write 'src/**/*.{js,jsx}'",
-    "fix:lintPrettier":"yarn prettierFixAll && yarn lintFixAll"
+    "lintFixAll": "eslint 'src/**/*.{js,jsx}'",
+    "prettierFixAll": "prettier --write 'src/**/*.{js,jsx}'",
+    "fix:lintPrettier": "yarn prettierFixAll && yarn lintFixAll",
+    "test": "jest --watch --coverage=false --changedSince=origin/main",
+    "testDebug": "jest -o --watch --coverage=false",
+    "testFinal": "jest",
+    "updateSnapshots": "jest -u --coverage=false"
   },
   "dependencies": {
     "@react-navigation/native": "^6.1.17",
@@ -45,6 +49,9 @@
     "@storybook/addon-ondevice-actions": "^7.6.20",
     "@storybook/addon-ondevice-controls": "^7.6.20",
     "@storybook/react-native": "^7.6.20",
+    "@testing-library/react-native": "^12.5.1",
+    "@types/jest": "^29.5.12",
+    "@types/react-test-renderer": "^18.3.0",
     "babel-loader": "^8.3.0",
     "cz-conventional-changelog": "^3.3.0",
     "eslint": "8.x",
@@ -52,8 +59,11 @@
     "eslint-plugin-react": "^7.34.3",
     "eslint-plugin-react-native": "^4.1.0",
     "globals": "^15.8.0",
+    "jest": "^29.7.0",
+    "jest-expo": "^51.0.3",
     "prettier": "^3.3.2",
     "react-dom": "18.2.0",
+    "react-test-renderer": "^18.3.1",
     "typescript": "^5.5.3",
     "typescript-eslint": "^7.16.0"
   },
@@ -62,5 +72,19 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
-  }
+  },
+  "jest": {
+    "preset": "jest-expo",
+    "transformIgnorePatterns": [
+      "node_modules/(?!((jest-)?react-native|@react-native(-community)?)|expo(nent)?|@expo(nent)?/.*|@expo-google-fonts/.*|react-navigation|@react-navigation/.*|@unimodules/.*|unimodules|sentry-expo|native-base|react-native-svg)"
+    ]
+  },
+  "collectCoverage": true,
+  "collectCoverageFrom": [
+    "**/*.{js,jsx}",
+    "!**/coverage/**",
+    "!**/node_modules/**",
+    "!**/babel.config.js",
+    "!**/jest.setup.js"
+  ]
 }
