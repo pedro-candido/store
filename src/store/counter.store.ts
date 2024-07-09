@@ -3,6 +3,7 @@ import { type StateCreator } from 'zustand'
 export interface ICounterStore {
   count: number
   increaseCount: () => void
+  removeCount: () => void
 }
 
 export const createCounterSlice: StateCreator<ICounterStore> = (set) => {
