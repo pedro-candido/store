@@ -6,16 +6,37 @@
     "start": "expo start --dev-client",
     "android": "expo run:android",
     "ios": "expo run:ios",
-    "web": "expo start --web"
+    "web": "expo start --web",
+    "clean:node_modules": "find . -name 'node_modules' -type d -prune -exec rm -rf '{}' + && yarn",
+    "storybook-generate": "sb-rn-get-stories"
   },
   "dependencies": {
+    "@react-navigation/native": "^6.1.17",
+    "@shopify/flash-list": "1.6.4",
+    "axios": "^1.7.2",
     "expo": "~51.0.18",
+    "expo-constants": "~16.0.2",
+    "expo-linking": "~6.3.1",
+    "expo-router": "~3.5.17",
     "expo-status-bar": "~1.12.1",
     "react": "18.2.0",
-    "react-native": "0.74.3"
+    "react-native": "0.74.3",
+    "react-native-elements": "^3.4.3",
+    "react-native-safe-area-context": "4.10.1",
+    "react-native-screens": "3.31.1",
+    "styled-components": "^6.1.11",
+    "zustand": "^4.5.4"
   },
   "devDependencies": {
-    "@babel/core": "^7.20.0"
+    "@babel/core": "^7.20.0",
+    "@react-native-async-storage/async-storage": "^1.23.1",
+    "@react-native-community/datetimepicker": "^8.1.1",
+    "@react-native-community/slider": "^4.5.2",
+    "@storybook/addon-ondevice-actions": "^7.6.20",
+    "@storybook/addon-ondevice-controls": "^7.6.20",
+    "@storybook/react-native": "^7.6.20",
+    "babel-loader": "^8.3.0",
+    "react-dom": "18.2.0"
   },
   "private": true
 }
