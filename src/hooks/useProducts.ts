@@ -1,9 +1,11 @@
 import { IUseProducts } from '@hooks/hooks.types';
 import { useEffect, useState } from 'react';
 import { api } from '@/api';
+import { useStore } from '@store/globalStore';
 
 function useProducts(): IUseProducts {
   const [products, setProducts] = useState([])
+  const { setAllProducts } = useStore()
 
   useEffect(() => {
     getProducts()
@@ -13,6 +15,7 @@ function useProducts(): IUseProducts {
      try {
        const { data } = await api.get("/products")
        setProducts(data)
+       setAllProducts(data)
 
        return { success: true }
      } catch(err) {

@@ -10,12 +10,12 @@ function Product({ id, title, price, category, description, image, rating }: TPr
           source={{
             uri: image,
           }}
-          width={50}
-          height={50}
+          width={100}
+          height={100}
         />
       </View>
       <View>
-        <Text>{title}</Text>
+        <Text numberOfLines={1}>{title}</Text>
         <Text>{price}</Text>
       </View>
       <View>

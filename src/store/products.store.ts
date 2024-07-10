@@ -13,9 +13,9 @@ export const createProductsSlice: StateCreator<IProductsStore> = (set) => {
     addProduct: () => set((state) => ({
       productsChosen: [...state.productsChosen],
     })),
-    setAllProducts: () =>
+    setAllProducts: (rest) =>
       set((state) => ({
-        products: [...state.products],
+        products: [...state.products, ...rest],
       })),
     products: [],
     productsChosen: []
