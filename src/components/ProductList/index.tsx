@@ -1,10 +1,14 @@
 
 import { testIds } from '@constants/testIds'
 import { FlashList } from '@shopify/flash-list'
+import { IProductList } from '@components/ProductList/ProductList.types';
+import Product from '@components/Product';
 
-function ProductList(products) {
+function ProductList({ products }:IProductList) {
   return (
-    <FlashList renderItem={} data={products} />
+    <FlashList renderItem={({
+      item
+                            }) => <Product {...item} />} data={products} />
   )
 }
 

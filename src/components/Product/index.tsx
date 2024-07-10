@@ -1,14 +1,6 @@
 import { Image, Pressable, Text, View } from 'react-native';
 import { Container } from '@components/Product/Product.styles';
-
-type TProduct = {
-  id: number
-  title: string
-  price: string
-  category: string
-  description: string
-  image: string
-}
+import { TProduct } from '@/types/Product';
 
 function Product({
                           id,
@@ -16,11 +8,17 @@ function Product({
                           price,
                           category,
                           description,
-                          image
+                          image,
+                          rating
                         }: TProduct) {
 return <Container>
   <View>
-    <Image source={require('image')} />
+    <Image source={{
+      uri: image
+    }}
+      width={200}
+           height={200}
+    />
   </View>
   <View>
     <Text>

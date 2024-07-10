@@ -7,11 +7,13 @@ const { Navigator, Screen } = createStackNavigator<LoggedNavigationParams>()
 
 function Routes() {
   return(
-    <NavigationContainer>
-      <Navigator>
-        <Screen name={LoggedRouters.CART} component={Cart} />
+    <NavigationContainer >
+      <Navigator initialRouteName={LoggedRouters.PRODUCTS}>
         <Screen name={LoggedRouters.PRODUCTS} component={Products} />
+        <Screen name={LoggedRouters.CART} component={Cart} />
       </Navigator>
     </NavigationContainer>
   )
 }
+
+export default Routes
