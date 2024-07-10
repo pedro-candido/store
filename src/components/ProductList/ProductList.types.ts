@@ -1,5 +1,6 @@
 import { TProduct } from '@/types/Product';
+import { AxiosResponse } from 'axios';
 
 export interface IProductList {
-  products: Array<TProduct>
+  products: TProduct[];
 }

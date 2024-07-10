@@ -1,9 +1,9 @@
 export enum LoggedRouters {
   PRODUCTS = 'Products',
-  CART = 'Cart'
+  CART = 'Cart',
 }
 
 export type LoggedNavigationParams = {
-  [LoggedRouters.CART]: undefined
-  [LoggedRouters.PRODUCTS]: undefined
-}
+  [LoggedRouters.CART]: undefined;
+  [LoggedRouters.PRODUCTS]: undefined;
+};

@@ -5,14 +5,14 @@ import { IUseCart, IAddProduct, IRemoveProduct } from '@hooks/hooks.types';
  * @constructor
  */
 function useCart(): IUseCart {
-
   function addProduct({ productId, productTestId }: IAddProduct) {}
 
-  function removeProductFromCart({ productId, productTestId }: IRemoveProduct){}
+  function removeProductFromCart({ productId, productTestId }: IRemoveProduct) {}
 
   return {
-    removeProductFromCart, addProduct
-  }
+    removeProductFromCart,
+    addProduct,
+  };
 }
 
-export default useCart
+export default useCart;

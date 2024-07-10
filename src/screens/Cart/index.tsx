@@ -1,7 +1,7 @@
 import { View } from 'react-native';
 
 function Cart() {
-  return <View></View>
+  return <View></View>;
 }
 
-export default Cart
+export default Cart;

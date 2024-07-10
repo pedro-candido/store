@@ -1,5 +1,5 @@
 export type TButtonProps = {
-  type: 'primary' | 'secondary'
-  size: number
-  text: string
-}
+  type: 'primary' | 'secondary';
+  size: number;
+  text: string;
+};
