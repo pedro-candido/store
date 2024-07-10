@@ -7,7 +7,6 @@ function Products() {
 
   return (
     <View>
-      <Text>Tela de produtos</Text>
       <ProductList products={products} />
     </View>
   );

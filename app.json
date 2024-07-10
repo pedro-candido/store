@@ -4,7 +4,13 @@
     "slug": "store",
     "version": "1.0.0",
     "plugins": [
-      "expo-router"
+      "expo-router",
+      [
+        "expo-font",
+        {
+          "fonts": ["./assets/fonts/Gabarito-Black.ttf", "./assets/fonts/Gabarito-Bold.ttf", "./assets/fonts/Gabarito-ExtraBold.ttf", "./assets/fonts/Gabarito-Medium.ttf", "./assets/fonts/Gabarito-Regular.ttf", "./assets/fonts/Gabarito-SemiBold.ttf", "./assets/fonts/Gabarito-VariableFont_wght.ttf"]
+        }
+      ]
     ]
   }
 }

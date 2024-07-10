@@ -4,15 +4,13 @@ import Product from '@components/Product';
 import { Dimensions, Image, View } from 'react-native';
 import { TProduct } from '@/types/Product';
 import { useStore } from '@store/globalStore';
+import ListEmptyComponent from '@components/ListEmptyComponent/ListEmptyComponent';
+import styled from 'styled-components/native';
 
-function ListEmptyComponent() {
-  return <View style={{
-    flex: 1, marginHorizontal: 'auto'
-  }}><Image width={50} height={50} source={{
-    uri: "https://i.gifer.com/ZKZg.gif"
-  }} />
-  </View>
-}
+const Container = styled.View`
+    height: 90%;
+    width: ${Dimensions.get('screen').width};
+`
 
 function ProductList({
                        products
@@ -21,9 +19,8 @@ function ProductList({
   return (
     <View style={{ height: '90%', width: Dimensions.get('screen').width, }}>
         <FlashList ListEmptyComponent={ListEmptyComponent} estimatedItemSize={200} renderItem={({ item }: { item: TProduct }) => <Product {...item} />}
-                     data={products} numColumns={2}  contentContainerStyle={{
+                     data={products} numColumns={2} contentContainerStyle={{
                        padding: 20,
-
         }} />
     </View>
   );
