@@ -1,9 +1,16 @@
-import { View, Text } from 'react-native';
+import AddedProductsList from '@components/AddedProductsList';
+import { Container, Title } from '@screens/Cart/Cart.styles.ts';
+import { useStore } from '@store/globalStore';
 
 function Cart() {
-  return <View>
-    <Text>Hello World</Text>
-  </View>
+  const { productsChosen } = useStore();
+
+  return (
+    <Container>
+      {productsChosen.length === 0 && <Title>Ops, não há produtos</Title>}
+      {productsChosen.length !== 0 && <AddedProductsList />}
+    </Container>
+  );
 }
 
 export default Cart;

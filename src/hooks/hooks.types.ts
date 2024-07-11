@@ -1,9 +1,13 @@
 import { AxiosResponse } from 'axios';
+
 import { TProduct } from '@/types/Product';
 
 export interface IAddProduct {
-  productId: string;
+  productId: number;
   productTestId: string;
+  image: string;
+  price: number;
+  name: string;
 }
 
 export interface IRemoveProduct {
@@ -18,11 +22,11 @@ export interface IUseCart {
 
 export interface IUseProducts {
   getProducts: () => Promise<{
-    success: boolean
+    success: boolean;
   }>;
   getOneProduct: (productId: string) => Promise<AxiosResponse<TProduct>>;
   sortAllProducts: () => Promise<AxiosResponse<TProduct[]>>;
   getAllCategories: () => Promise<AxiosResponse<TProduct[]>>;
   getProductsFromACategory: (category: string) => Promise<AxiosResponse<TProduct>>;
-  products: TProduct[] | []
+  products: TProduct[] | [];
 }

@@ -1,0 +1,42 @@
+// https://docs.expo.dev/guides/using-eslint/
+{
+  "extends": "expo",
+  "plugins": ["import"],
+  "rules": {
+    "import/order": [
+      "error",
+      {
+        "groups": [["builtin", "external"], "internal", ["sibling", "parent"], "index"],
+        "pathGroups": [
+          {
+            "pattern": "@(react|react-native)",
+            "group": "external",
+            "position": "before"
+          },
+          {
+            "pattern": "@(react)-**",
+            "group": "external",
+            "position": "before"
+          },
+          {
+            "pattern": "@(styled-components)/**",
+            "group": "external",
+            "position": "before"
+          },
+          {
+            "pattern": "@(@legacy|@dasa-health|@nsm|@nav|@cross)/**",
+            "group": "internal",
+            "position": "after"
+          }
+        ],
+        "pathGroupsExcludedImportTypes": ["react"],
+        "newlines-between": "always",
+        "alphabetize": {
+          "order": "asc",
+          "caseInsensitive": true
+        },
+        "warnOnUnassignedImports": true
+      }
+    ]
+  }
+}

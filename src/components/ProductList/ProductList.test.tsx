@@ -1,11 +1,14 @@
 import React from 'react';
+
 import TestRenderer from 'react-test-renderer';
+
 import { render, fireEvent } from '@testing-library/react-native';
 
-import { ProductList } from './';
+import { products } from '@/__mocks__/productsMock';
 import { testIds } from '@constants/testIds';
 import { useCart } from '@hooks/index';
-import { products } from '@/__mocks__/productsMock';
+
+import { ProductList } from './';
 const { removeFromCartButton, addToCartButton } = testIds;
 
 const { addProduct, removeProductFromCart } = useCart();

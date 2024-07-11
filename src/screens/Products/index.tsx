@@ -1,4 +1,5 @@
-import { Text, View } from 'react-native';
+import { View } from 'react-native';
+
 import { ProductList } from '@components/ProductList';
 import useProducts from '@hooks/useProducts';
 

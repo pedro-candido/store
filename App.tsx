@@ -1,10 +1,12 @@
 import React, { useEffect } from 'react';
 
-import { StatusBar } from 'expo-status-bar';
 import { useFonts } from 'expo-font';
 import * as SplashScreen from 'expo-splash-screen';
+import { ThemeProvider } from 'styled-components';
 
 import Routes from '@routes/Routes';
+
+import theme from './src/global/theme';
 
 SplashScreen.preventAutoHideAsync();
 
@@ -29,6 +31,8 @@ export default function App() {
   }
 
   return (
+    <ThemeProvider theme={theme}>
       <Routes />
+    </ThemeProvider>
   );
 }

@@ -1,28 +1,35 @@
-import { NavigationContainer, useNavigation } from '@react-navigation/native';
+import React from 'react';
+
+import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import { LoggedNavigationParams, LoggedRouters } from '@routes/LoggedRouters';
+
+import Logo from '@/assets/Logo.svg';
 import { Cart, Products } from '@/screens';
-import { FontAwesome } from '@expo/vector-icons';
-import { Pressable } from 'react-native';
+import HeaderLeftItem from '@components/HeaderLeftItem';
+import HeaderRightItem from '@components/HeaderRightItem';
+import { LoggedNavigationParams, LoggedRouters } from '@routes/LoggedRouters';
 
 const { Navigator, Screen } = createStackNavigator<LoggedNavigationParams>();
-
-const Icon = () => {
-  const {navigate} = useNavigation()
-
-  return <Pressable onPressOut={() => navigate(LoggedRouters.CART)}>
-    <FontAwesome name={'search'} />
-  </Pressable>
-}
 
 function Routes() {
   return (
     <NavigationContainer>
       <Navigator initialRouteName={LoggedRouters.PRODUCTS}>
-        <Screen options={{
-          headerRight: Icon
-        }} name={LoggedRouters.PRODUCTS} component={Products} />
-        <Screen name={LoggedRouters.CART} component={Cart} />
+        <Screen
+          name={LoggedRouters.PRODUCTS}
+          component={Products}
+          options={{
+            headerTitle: () => <Logo width={100} />,
+            headerRight: () => <HeaderRightItem />,
+          }}
+        />
+        <Screen
+          name={LoggedRouters.CART}
+          component={Cart}
+          options={{
+            headerLeft: () => <HeaderLeftItem />,
+          }}
+        />
       </Navigator>
     </NavigationContainer>
   );

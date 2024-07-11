@@ -11,7 +11,7 @@
     "storybook-generate": "sb-rn-get-stories",
     "web": "expo start --web",
     "lint": "eslint .",
-    "lintFixAll": "eslint 'src/**/*.{ts,tsx}'",
+    "lintFixAll": "eslint 'src/**/*.{ts,tsx}' --fix",
     "prettierFixAll": "prettier --write 'src/**/*.{ts,tsx}'",
     "fix:lintPrettier": "yarn prettierFixAll && yarn lintFixAll",
     "test": "jest --watch --coverage=false --changedSince=origin/main",
@@ -38,6 +38,7 @@
     "react-native-reanimated": "^3.13.0",
     "react-native-safe-area-context": "^4.10.8",
     "react-native-screens": "3.31.1",
+    "react-native-svg": "^15.3.0",
     "react-native-vector-icons": "^10.1.0",
     "styled-components": "^6.1.11",
     "zustand": "^4.5.4"
@@ -69,6 +70,7 @@
     "jest-expo": "^51.0.3",
     "prettier": "^3.3.2",
     "react-dom": "18.2.0",
+    "react-native-svg-transformer": "^1.5.0",
     "react-test-renderer": "^18.3.1",
     "typescript": "^5.5.3",
     "typescript-eslint": "^7.16.0"
