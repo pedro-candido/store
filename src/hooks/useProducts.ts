@@ -15,8 +15,6 @@ function useProducts(): IUseProducts {
      try {
        const { data } = await api.get("/products")
        setProducts(data)
-       setAllProducts(data)
-
        return { success: true }
      } catch(err) {
        console.log(err)

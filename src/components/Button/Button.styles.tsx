@@ -7,15 +7,18 @@ type TPressableProps = {
 } & PressableProps;
 
 export const PressableButton = styled.Pressable<TPressableProps>`
-  background-color: ${({ type }) => (type === 'primary' ? 'green' : 'red')};
+  background-color: ${({ type }) => (type === 'primary' ? '#005a54' : 'red')};
   width: 100%;
     padding: 8px;
-    border-radius: 40px;
+    border-radius: 10px;
     margin-top: 5%;
     transition: .4s;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
 `;
 
 export const Title = styled.Text`
     color: #ffffff;
-    font-family: "Gabarito-Bold"
+    font-family: "Gabarito-Bold";
 `

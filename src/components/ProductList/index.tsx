@@ -17,10 +17,9 @@ function ProductList({
                      }: IProductList) {
 
   return (
-    <View style={{ height: '90%', width: Dimensions.get('screen').width, }}>
-        <FlashList ListEmptyComponent={ListEmptyComponent} estimatedItemSize={200} renderItem={({ item }: { item: TProduct }) => <Product {...item} />}
-                     data={products} numColumns={2} contentContainerStyle={{
-                       padding: 20,
+    <View style={{ height: '95%', width: Dimensions.get('screen').width, }}>
+        <FlashList bounces={false} ListEmptyComponent={ListEmptyComponent} estimatedItemSize={200} renderItem={({ item }: { item: TProduct }) => <Product {...item} />}
+                     data={products} numColumns={2} contentContainerStyle={{ padding: 20,
         }} />
     </View>
   );

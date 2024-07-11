@@ -5,6 +5,8 @@ import styled from 'styled-components/native';
 import Button from '@/components/Button'
 
 import { FontAwesome } from '@expo/vector-icons';
+import { useStore } from '@store/globalStore';
+import { useEffect } from 'react';
 
 const Picture = styled.Image`
     width: 150px;
@@ -24,8 +26,13 @@ const RatingContainer = styled.View`
     margin-top: 5%;
 `
 
-
 function Product({ id, title, price, category, description, image, rating }: TProduct) {
+  const { addProduct, productsChosen } = useStore()
+
+  function handlePress() {
+    addProduct(id)
+  }
+
   return (
     <Container>
       <View>
@@ -37,17 +44,21 @@ function Product({ id, title, price, category, description, image, rating }: TPr
       </View>
       <View>
         <View>
-        <Text numberOfLines={2}>{title}</Text>
+        <Text style={{
+          fontFamily: 'Gabarito-Regular'
+        }} numberOfLines={2}>{title}</Text>
           <View style={{
             flexDirection: 'row',
-            justifyContent: 'space-between'
+            justifyContent: 'space-between',
+            alignContent: 'center',
+            alignItems: 'flex-end'
           }}>
-            <View>
-              <RatingContainer style={{
-              }}>
+              <RatingContainer>
                 <View style={{
                   flexDirection: 'row',
-                  alignItems: 'center'
+                  alignItems: 'flex-start',
+                  marginTop: 'auto',
+                  marginBottom: 'auto'
                 }}>
                   <FontAwesome name={'star'} style={{
                     color: '#fdc509',
@@ -58,10 +69,9 @@ function Product({ id, title, price, category, description, image, rating }: TPr
               <PriceContainer>
                 <Text>R$ {String(price.toFixed(2)).replace('.', ',')}</Text>
               </PriceContainer>
-            </View>
-            <View>
-              <Button iconName={'cart-plus'} type={"primary"} onPress={() => {}} />
-            </View>
+          </View>
+          <View>
+            <Button iconName={'shopping-cart'} text={"Comprar"} type={"primary"} onPress={handlePress} />
           </View>
         </View>
       </View>

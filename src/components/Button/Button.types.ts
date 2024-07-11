@@ -1,6 +1,7 @@
 import { FontAwesome } from '@expo/vector-icons';
+import { PressableProps } from 'react-native';
 
-export type TButtonProps = {
+export interface IButtonProps extends PressableProps {
   type: 'primary' | 'secondary';
   size?: number;
   text?: string;

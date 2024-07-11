@@ -2,16 +2,16 @@ import { type StateCreator } from 'zustand';
 import { TProduct } from '@/types/Product';
 
 export interface IProductsStore {
-  productsChosen: Array<string>;
+  productsChosen: Array<number>;
   products: Array<string>;
-  addProduct: () => void;
+  addProduct: (productId: number) => void;
   setAllProducts: (products: TProduct[]) => void
 }
 
 export const createProductsSlice: StateCreator<IProductsStore> = (set) => {
   return {
-    addProduct: () => set((state) => ({
-      productsChosen: [...state.productsChosen],
+    addProduct: (rest) => set((state) => ({
+      productsChosen: [...state.productsChosen, rest],
     })),
     setAllProducts: (rest) =>
       set((state) => ({
