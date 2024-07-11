@@ -1,9 +1,18 @@
+import { useNavigation } from '@react-navigation/core';
+
 import { Container, Picture, StyledButton } from '@components/AddedProduct/AddedProduct.styles';
 import Label from '@components/Label';
+import { useStore } from '@store/globalStore';
 import { TProductsChosen } from '@store/products.store';
 import { convertNumberToDollar } from '@utils/formatter';
 
-function AddedProduct({ image, price, title }: TProductsChosen) {
+function AddedProduct({ productId, image, price, title }: TProductsChosen) {
+  const { removeProduct } = useStore();
+
+  const handlePress = () => {
+    removeProduct(productId);
+  };
+
   return (
     <Container>
       <Picture source={{ uri: image }} />
@@ -16,7 +25,7 @@ function AddedProduct({ image, price, title }: TProductsChosen) {
         {title}
       </Label>
       <Label>{convertNumberToDollar(price)}</Label>
-      <StyledButton type={'secondary'} iconName={'close'} />
+      <StyledButton onPress={handlePress} type={'secondary'} iconName={'close'} />
     </Container>
   );
 }

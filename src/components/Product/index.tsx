@@ -20,10 +20,10 @@ import { hasProductOnCart } from '@utils/products';
 const { productTestId } = testIds;
 
 function Product({ id, title, price, category, description, image, rating }: TProduct) {
-  const { addProduct, productsChosen } = useStore();
+  const { addProduct, productsChosen, removeProduct } = useStore();
   const isProductAlreadyAddedToCard = hasProductOnCart(id, productsChosen);
 
-  function handlePress() {
+  function handlePressPrimary() {
     addProduct({
       productId: id,
       productTestId: `${productTestId}${id}`,
@@ -31,6 +31,10 @@ function Product({ id, title, price, category, description, image, rating }: TPr
       price,
       title,
     });
+  }
+
+  function handlePressSecondary() {
+    removeProduct(id);
   }
 
   return (
@@ -60,14 +64,14 @@ function Product({ id, title, price, category, description, image, rating }: TPr
           </Wrapper>
           <View>
             {!isProductAlreadyAddedToCard && (
-              <Button iconName={'cart'} text={'Add to Cart'} onPress={handlePress} />
+              <Button iconName={'cart'} text={'Add to Cart'} onPress={handlePressPrimary} />
             )}
             {isProductAlreadyAddedToCard && (
               <Button
                 type={'secondary'}
                 iconName={'cart-remove'}
                 text={'Remove'}
-                onPress={handlePress}
+                onPress={handlePressSecondary}
               />
             )}
           </View>

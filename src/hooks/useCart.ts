@@ -6,16 +6,14 @@ import { useStore } from '@store/globalStore';
  * @constructor
  */
 function useCart(): IUseCart {
-  const { addProduct: addProductAction, productsChosen } = useStore();
-  function addProduct({ productId, productTestId, image, price }: IAddProduct) {
-    addProductAction(productId, productTestId, image, price);
+  const { addProduct: addProductAction, removeProduct: removeProductAction } = useStore();
+  function addProduct({ productId, productTestId, image, price, title }: IAddProduct) {
+    addProductAction({ productId, productTestId, image, price, title });
   }
 
-  function getCart() {
-    return productsChosen;
+  function removeProductFromCart({ productId }: IRemoveProduct) {
+    removeProductAction(productId);
   }
-
-  function removeProductFromCart({ productId, productTestId }: IRemoveProduct) {}
 
   return {
     removeProductFromCart,

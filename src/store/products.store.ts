@@ -13,7 +13,8 @@ export type TProductsChosen = {
 export interface IProductsStore {
   productsChosen: TProductsChosen[];
   products: string[];
-  addProduct: ({ productId, productTestId, image, price }: TProductsChosen) => void;
+  addProduct: ({ productId, productTestId, image, price, title }: TProductsChosen) => void;
+  removeProduct: (productId: number) => void;
 }
 
 export const createProductsSlice: StateCreator<IProductsStore> = (set) => {
@@ -31,6 +32,15 @@ export const createProductsSlice: StateCreator<IProductsStore> = (set) => {
           },
         ],
       })),
+    removeProduct: (productId) =>
+      set((state) => {
+        const arrWithoutProduct = state.productsChosen.filter(
+          (item) => item.productId !== productId
+        );
+        return {
+          productsChosen: arrWithoutProduct,
+        };
+      }),
     products: [],
     productsChosen: [],
   };

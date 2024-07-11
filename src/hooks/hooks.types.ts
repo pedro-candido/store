@@ -7,17 +7,16 @@ export interface IAddProduct {
   productTestId: string;
   image: string;
   price: number;
-  name: string;
+  title: string;
 }
 
 export interface IRemoveProduct {
-  productId: string;
-  productTestId: string;
+  productId: number;
 }
 
 export interface IUseCart {
   addProduct: ({ productId, productTestId }: IAddProduct) => void;
-  removeProductFromCart: ({ productId, productTestId }: IRemoveProduct) => void;
+  removeProductFromCart: ({ productId }: IRemoveProduct) => void;
 }
 
 export interface IUseProducts {

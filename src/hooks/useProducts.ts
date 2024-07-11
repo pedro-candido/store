@@ -23,7 +23,7 @@ function useProducts(): IUseProducts {
   }
 
   async function getOneProduct(productId: string) {
-    const response = await fetch(`https://fakestoreapi.com/products/${productId}`);
+    const response = await fetch(`products/${productId}`);
     return await response.json();
   }
 

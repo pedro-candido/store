@@ -5,7 +5,7 @@ import Label from '@components/Label';
 export const Container = styled.View`
   height: 95%;
   width: 100%;
-  justify-content: space-around;
+  justify-content: center;
 `;
 
 export const Title = styled(Label)`
