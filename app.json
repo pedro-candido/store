@@ -3,9 +3,6 @@
     "name": "store",
     "slug": "store",
     "version": "1.0.0",
-    "splash": {
-      "image": "./assets/Logo.png"
-    },
     "plugins": [
       "expo-router",
       [
