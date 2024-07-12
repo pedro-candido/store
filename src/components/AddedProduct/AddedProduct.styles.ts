@@ -1,6 +1,7 @@
 import styled from 'styled-components/native';
 
 import Button from '@components/Button';
+import Label from '@components/Label';
 
 export const Container = styled.View`
   flex-direction: row;
@@ -18,4 +19,8 @@ export const Picture = styled.Image`
 export const StyledButton = styled(Button)`
   max-width: 36px;
   margin-top: 0;
+`;
+
+export const StyledLabel = styled(Label)`
+  width: 100;
 `;
