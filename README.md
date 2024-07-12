@@ -2,7 +2,13 @@
 
 <p align="center">
 <img src="https://github.com/pedro-candido/store/blob/master/src/assets/Logo-white.png?raw=true" />
+</p>
 
+<p>
+<img src="https://github.com/pedro-candido/store/blob/master/src/assets/print1.png?raw=true" />
+<img src="https://github.com/pedro-candido/store/blob/master/src/assets/print2.png?raw=true" />
+<img src="https://github.com/pedro-candido/store/blob/master/src/assets/print3.png?raw=true" />
+<img src="https://github.com/pedro-candido/store/blob/master/src/assets/print4.png?raw=true" />
 </p>
 Olá pessoal, espero que estejam muito bem!
 
