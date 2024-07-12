@@ -31,6 +31,7 @@
     "expo-router": "~3.5.17",
     "expo-splash-screen": "~0.27.5",
     "expo-status-bar": "~1.12.1",
+    "jest-styled-components": "^7.2.0",
     "react": "18.2.0",
     "react-native": "0.74.3",
     "react-native-elements": "^3.4.3",
@@ -55,6 +56,7 @@
     "@storybook/addon-ondevice-actions": "^7.6.20",
     "@storybook/addon-ondevice-controls": "^7.6.20",
     "@storybook/react-native": "^7.6.20",
+    "@testing-library/jest-native": "^5.4.3",
     "@testing-library/react-native": "^12.5.1",
     "@types/jest": "^29.5.12",
     "@types/react-test-renderer": "^18.3.0",
@@ -80,19 +82,5 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
-  },
-  "jest": {
-    "preset": "jest-expo",
-    "transformIgnorePatterns": [
-      "node_modules/(?!((jest-)?react-native|@react-native(-community)?)|expo(nent)?|@expo(nent)?/.*|@expo-google-fonts/.*|react-navigation|@react-navigation/.*|@unimodules/.*|unimodules|sentry-expo|native-base|react-native-svg)"
-    ]
-  },
-  "collectCoverage": true,
-  "collectCoverageFrom": [
-    "**/*.{js,jsx}",
-    "!**/coverage/**",
-    "!**/node_modules/**",
-    "!**/babel.config.js",
-    "!**/jest.setup.js"
-  ]
+  }
 }

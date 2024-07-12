@@ -1,4 +1,3 @@
-import { useEffect } from 'react';
 import { View } from 'react-native';
 
 import Button from '@/components/Button';
@@ -13,14 +12,16 @@ import {
   Wrapper,
 } from '@components/Product/Product.styles';
 import { testIds } from '@constants/testIds';
+import { useProducts } from '@hooks/useProducts';
 import { useStore } from '@store/globalStore';
 import { convertNumberToDollar } from '@utils/formatter';
-import { hasProductOnCart } from '@utils/products';
 
 const { productTestId } = testIds;
 
-function Product({ id, title, price, category, description, image, rating }: TProduct) {
+function Product({ id, title, price, description, image, rating }: TProduct) {
   const { addProduct, productsChosen, removeProduct } = useStore();
+  const { hasProductOnCart } = useProducts();
+
   const isProductAlreadyAddedToCard = hasProductOnCart(id, productsChosen);
 
   function handlePressPrimary() {
@@ -63,11 +64,16 @@ function Product({ id, title, price, category, description, image, rating }: TPr
             </PriceContainer>
           </Wrapper>
           <View>
-            {!isProductAlreadyAddedToCard && (
-              <Button iconName={'cart'} text={'Add to Cart'} onPress={handlePressPrimary} />
-            )}
-            {isProductAlreadyAddedToCard && (
+            {!isProductAlreadyAddedToCard ? (
               <Button
+                testID={`add-${productTestId}${id}`}
+                iconName={'cart'}
+                text={'Add to Cart'}
+                onPress={handlePressPrimary}
+              />
+            ) : (
+              <Button
+                testID={`remove-${productTestId}${id}`}
                 type={'secondary'}
                 iconName={'cart-remove'}
                 text={'Remove'}

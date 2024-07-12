@@ -6,7 +6,7 @@ import { useStore } from '@store/globalStore';
 import { TProductsChosen } from '@store/products.store';
 import { convertNumberToDollar } from '@utils/formatter';
 
-function AddedProduct({ productId, image, price, title }: TProductsChosen) {
+function AddedProduct({ productId, image, price, title, productTestId }: TProductsChosen) {
   const { removeProduct } = useStore();
 
   const handlePress = () => {
@@ -25,7 +25,12 @@ function AddedProduct({ productId, image, price, title }: TProductsChosen) {
         {title}
       </Label>
       <Label>{convertNumberToDollar(price)}</Label>
-      <StyledButton onPress={handlePress} type={'secondary'} iconName={'close'} />
+      <StyledButton
+        testID={productTestId}
+        onPress={handlePress}
+        type={'secondary'}
+        iconName={'close'}
+      />
     </Container>
   );
 }

@@ -9,4 +9,5 @@ export type TProduct = {
     rate: number;
     count: number;
   };
+  isProductAlreadyAddedToCard?: boolean;
 };

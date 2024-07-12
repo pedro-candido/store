@@ -3,8 +3,6 @@ import { Image, View } from 'react-native';
 import { FlashList } from '@shopify/flash-list';
 
 import AddedProduct from '@components/AddedProduct';
-import Button from '@components/Button';
-import Label from '@components/Label';
 import { useStore } from '@store/globalStore';
 
 function AddedProductsList({}) {

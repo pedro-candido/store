@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ListEmptyComponent should match snapshot 1`] = `
+<View
+  style={
+    {
+      "flex": 1,
+      "marginHorizontal": "auto",
+    }
+  }
+>
+  <Image
+    height={50}
+    source={
+      {
+        "uri": "https://i.gifer.com/ZKZg.gif",
+      }
+    }
+    width={50}
+  />
+</View>
+`;

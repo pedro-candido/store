@@ -6,8 +6,6 @@ import { ThemeProvider } from 'styled-components';
 
 import Routes from '@routes/Routes';
 
-import theme from './src/global/theme';
-
 SplashScreen.preventAutoHideAsync();
 
 export default function App() {
@@ -30,9 +28,5 @@ export default function App() {
     return null;
   }
 
-  return (
-    <ThemeProvider theme={theme}>
-      <Routes />
-    </ThemeProvider>
-  );
+  return <Routes />;
 }

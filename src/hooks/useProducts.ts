@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 
 import { api } from '@/api';
 import { IUseProducts } from '@hooks/hooks.types';
-import { useStore } from '@store/globalStore';
+import { TProductsChosen } from '@store/products.store';
 
 function useProducts(): IUseProducts {
   const [products, setProducts] = useState([]);
@@ -13,6 +13,7 @@ function useProducts(): IUseProducts {
 
   async function getProducts() {
     try {
+      console.warn('products');
       const { data } = await api.get('/products');
       setProducts(data);
       return { success: true };
@@ -42,6 +43,10 @@ function useProducts(): IUseProducts {
     return await response.json();
   }
 
+  function hasProductOnCart(productId: number, productsChosen: TProductsChosen[]) {
+    return !!productsChosen.find((item) => item.productId === productId);
+  }
+
   return {
     getProducts,
     getOneProduct,
@@ -49,7 +54,8 @@ function useProducts(): IUseProducts {
     sortAllProducts,
     getProductsFromACategory,
     products,
+    hasProductOnCart,
   };
 }
 
-export default useProducts;
+export { useProducts };

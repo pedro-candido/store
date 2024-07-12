@@ -11,7 +11,14 @@ function HeaderRightItem() {
     navigate(LoggedRouters.CART);
   };
 
-  return <HeaderItem hasMarginRight={true} iconName={'shopping-cart'} onPress={handlePress} />;
+  return (
+    <HeaderItem
+      testID={'header-right-item-button'}
+      hasMarginRight={true}
+      iconName={'shopping-cart'}
+      onPress={handlePress}
+    />
+  );
 }
 
 export default HeaderRightItem;

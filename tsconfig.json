@@ -32,5 +32,7 @@
   "include": [
     "**/*.ts",
     "**/*.tsx"
-  ]
+  ],
+  "exclude": [
+    "jest.config.js", "**/*.spec.ts", "**/*.spec.tsx", "test-setup.ts"]
 }
