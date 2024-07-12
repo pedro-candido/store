@@ -55,3 +55,36 @@ Segue imagem com conteúdo representado.
 
 <img src="https://raw.githubusercontent.com/pedro-candido/store/b5c834e418cbfabd59480c9b569f4c28d27a0cd2/src/assets/organization.svg"/>
 
+
+## Setup
+
+1. Instale o NVM ou Node.js LTS release - v20.12.0(Versão utilizada)
+2. Git
+3. Commitzen
+4. Yarn
+5. Expo CLI
+6. Android Studio - Versão recomendada Jellyfish 2023.3.1
+7. Graddle version - Versão 8.6
+8. XCode - versão recomendada 15.4
+9. Testes realizados no iOS 17.4 - iPhone 15 Pro e no Pixel 8(API 34)
+
+## Rodar o projeto
+
+1. Clone o projeto
+   ```bash
+    git clone https://github.com/pedro-candido/store.git
+   ```
+2. Instale as dependências rodando:
+
+   ```bash
+    yarn
+
+    // Apenas rode se for utilizar o iOS
+    clean:ios
+   ```
+
+3. Instale os builds nos respectivos emuladores.
+   ```
+   yarn android
+   yarn ios
+   ```
