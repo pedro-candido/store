@@ -107,3 +107,12 @@ Segue imagem com conteúdo representado.
 ```
 
 2. Rode o yarn start novamente ou atualize o metro.
+
+## Melhorias para o projeto caso fosse um projeto para Produção
+
+- Adicionar rastreamento de erros e observabilidade com ferramentas como Dynatrace, Sentry, Crashlytics ou Datadog.
+- Adicionar SplashScreen animada.
+- Telas de Login, Cadastro, perfil e finalização de compra.
+- Ferramentas para Testes A/B, feature flags e tagueamento como o Firebase/Analytics.
+- Adição de recursos OTA(Over the air).
+- Documentação de Code Style.
