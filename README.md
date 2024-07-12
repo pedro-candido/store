@@ -29,3 +29,4 @@ Segue lista das bibliotecas principais utilizadas no app para a realização:
 
 Atuei em alguns projetos durante minha carreira, com organizações diferentes, escolhi uma que se aproximasse ao máximo de uma estrutura que me agradasse, tudo separado ficando de fácil uso pra qualquer pessoa que entrasse e fosse utilizar o projeto.
 
+<img src="https://raw.githubusercontent.com/pedro-candido/store/b5c834e418cbfabd59480c9b569f4c28d27a0cd2/src/assets/organization.svg"/>

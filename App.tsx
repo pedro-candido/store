@@ -32,5 +32,6 @@ export default function App() {
   // Render Storybook if storybookEnabled is true
   AppEntryPoint = require('./.storybook').default;
 
+  // Change from Routes to AppEntryPoint to test storybook
   return <Routes />;
 }
