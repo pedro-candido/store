@@ -18,7 +18,6 @@ function useProducts(): IUseProducts {
       setProducts(data);
       setError(false);
     } catch (err) {
-      console.log(err);
       setError(true);
     }
   }
