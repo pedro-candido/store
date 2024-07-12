@@ -19,8 +19,8 @@ function AddedProduct({ productId, image, price, title, productTestId }: TProduc
   return (
     <Container>
       <Picture source={{ uri: image }} />
-      <Label numberOfLines={1}>{title}</Label>
-      <StyledLabel>{convertNumberToDollar(price)}</StyledLabel>
+      <StyledLabel numberOfLines={1}>{title}</StyledLabel>
+      <Label>{convertNumberToDollar(price)}</Label>
       <StyledButton
         testID={productTestId}
         onPress={handlePress}

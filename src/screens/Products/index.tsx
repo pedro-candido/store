@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { View } from 'react-native';
 
 import Label from '@components/Label';
@@ -6,7 +7,9 @@ import { useProducts } from '@hooks/useProducts/useProducts';
 import { Container, LabelText } from '@screens/Products/Products.styles';
 
 function Products() {
-  const { products, error } = useProducts();
+  const { products, error, getProducts } = useProducts();
+
+  useEffect(() => {}, [getProducts()]);
 
   if (!error) {
     return (
