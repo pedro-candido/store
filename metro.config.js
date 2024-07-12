@@ -8,6 +8,7 @@ module.exports = (() => {
   config.transformer = {
     ...transformer,
     babelTransformerPath: require.resolve('react-native-svg-transformer/expo'),
+    unstable_allowRequireContext: true,
   };
   config.resolver = {
     ...resolver,
