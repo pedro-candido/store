@@ -6,9 +6,7 @@ import { products } from '@/__mocks__/productsMock';
 const AddedProductMeta: Meta<typeof AddedProduct> = {
   title: 'AddedProduct',
   component: AddedProduct,
-  args: {
-    children: 'Hello world',
-  },
+  args: {},
   decorators: [
     (Story) => (
       <View style={{ justifyContent: 'center', flex: 1 }}>
@@ -22,6 +20,6 @@ export default AddedProductMeta;
 
 export const Default: StoryObj<typeof AddedProduct> = {
   args: {
-    ...products[0],
+    ...products[1],
   },
 };

@@ -1,11 +1,11 @@
 import React from 'react';
 
+import { Logo } from '@/assets';
 import {
   CartContainer,
   IconContainer,
   RedPoint,
   SafeContainer,
-  StyledLogo,
 } from '@components/Header/Header.styles';
 import { useStore } from '@store/globalStore';
 
@@ -20,7 +20,7 @@ function Header({ RightIcon, LeftIcon }: IHeader) {
   return (
     <SafeContainer>
       <IconContainer>{LeftIcon ?? <></>}</IconContainer>
-      <StyledLogo />
+      <Logo width={'150px'} />
       <CartContainer>
         <IconContainer>{RightIcon ?? <></>}</IconContainer>
         {RightIcon && productsChosen.length > 0 && <RedPoint />}

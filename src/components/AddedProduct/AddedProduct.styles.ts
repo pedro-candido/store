@@ -22,5 +22,5 @@ export const StyledButton = styled(Button)`
 `;
 
 export const StyledLabel = styled(Label)`
-  width: 100;
+  width: 50px;
 `;

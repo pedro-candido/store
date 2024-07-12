@@ -27,7 +27,3 @@ export const RedPoint = styled.View`
   position: absolute;
   border-radius: 100px;
 `;
-
-export const StyledLogo = styled(Logo)`
-  width: 150px;
-`;
