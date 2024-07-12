@@ -1,5 +1,7 @@
 ## Introdução
 
+<img src="https://github.com/pedro-candido/store/blob/master/src/assets/Logo.png?raw=true" />
+
 Olá pessoal, espero que estejam muito bem!
 
 Este projeto tem a intenção de validar meus conhecimentos perante o React Native.
@@ -30,7 +32,6 @@ Segue lista das bibliotecas principais utilizadas no app para a realização:
 Atuei em alguns projetos durante minha carreira, com organizações diferentes, escolhi uma que se aproximasse ao máximo de uma estrutura que me agradasse, tudo separado ficando de fácil uso pra qualquer pessoa que entrasse e fosse utilizar o projeto.
 
 ```
-
 
 ├── src
 │   ├── assets          # Assets folder for app icon and splashscreen
