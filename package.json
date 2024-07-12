@@ -4,6 +4,7 @@
   "main": "index.js",
   "scripts": {
     "android": "expo run:android",
+    "clean:ios": "cd ios && pod deintegrate && pod install && cd ..",
     "commit": "cz",
     "commitzen": "cz",
     "clean:nm": "find . -name 'node_modules' -type d -prune -exec rm -rf '{}' + && yarn",
