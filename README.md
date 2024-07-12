@@ -1,7 +1,8 @@
 ## Introdução
 
 <p align="center">
-<img src="https://github.com/pedro-candido/store/blob/master/src/assets/Logo.png?raw=true" />
+<img src="https://github.com/pedro-candido/store/blob/master/src/assets/Logo-white.png?raw=true" />
+
 </p>
 Olá pessoal, espero que estejam muito bem!
 
