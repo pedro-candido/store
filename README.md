@@ -94,3 +94,16 @@ Segue imagem com conteúdo representado.
    yarn android
    yarn ios
    ```
+
+## Para utilizar o storybook
+
+1. Vá para o arquivo `./App.tsx` e troque o return
+
+```javascript
+   // from
+  return <Routes />;
+  // to
+  return <AppEntryPoint />
+```
+
+2. Rode o yarn start novamente ou atualize o metro.
