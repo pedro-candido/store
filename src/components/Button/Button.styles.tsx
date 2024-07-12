@@ -2,7 +2,7 @@ import { PressableProps } from 'react-native';
 
 import styled from 'styled-components/native';
 
-import { MaterialCommunityIcons } from '@expo/vector-icons';
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
 type TPressableProps = {
   type: 'primary' | 'secondary';

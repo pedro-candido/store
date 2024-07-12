@@ -27,6 +27,10 @@ export default function App() {
   if (!loaded && !error) {
     return null;
   }
+  let AppEntryPoint = Routes;
 
-  return <Routes />;
+  // Render Storybook if storybookEnabled is true
+  AppEntryPoint = require('./.storybook').default;
+
+  return <AppEntryPoint />;
 }

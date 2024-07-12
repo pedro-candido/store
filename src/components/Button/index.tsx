@@ -1,5 +1,5 @@
-import { Icon, PressableButton, Title } from '@components/Button/Button.styles';
-import { IButtonProps } from '@components/Button/Button.types';
+import { Icon, PressableButton, Title } from './Button.styles';
+import { IButtonProps } from './Button.types';
 
 function Button({ type = 'primary', text, iconName, ...rest }: IButtonProps) {
   return (

@@ -1,7 +1,6 @@
 import React from 'react';
 
 import { fireEvent, render } from '@testing-library/react-native';
-import { before } from 'node:test';
 
 import { products } from '@/__mocks__/productsMock';
 import { testIds } from '@constants/testIds';
