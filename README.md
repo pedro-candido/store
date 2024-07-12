@@ -94,7 +94,7 @@ Segue imagem com conteúdo representado.
    yarn android
    yarn ios
    ```
-
+DX
 ## Para utilizar o storybook
 
 1. Vá para o arquivo `./App.tsx` e troque o return
