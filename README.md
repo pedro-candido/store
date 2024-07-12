@@ -5,10 +5,10 @@
 </p>
 
 <p>
-<img width="200" src="https://github.com/pedro-candido/store/blob/master/src/assets/print1.png?raw=true" />
-<img width="200" src="https://github.com/pedro-candido/store/blob/master/src/assets/print2.png?raw=true" />
-<img width="200" src="https://github.com/pedro-candido/store/blob/master/src/assets/print3.png?raw=true" />
-<img width="200" src="https://github.com/pedro-candido/store/blob/master/src/assets/print4.png?raw=true" />
+<img height="400" src="https://github.com/pedro-candido/store/blob/master/src/assets/print1.png?raw=true" />
+<img height="400" src="https://github.com/pedro-candido/store/blob/master/src/assets/print2.png?raw=true" />
+<img height="400" src="https://github.com/pedro-candido/store/blob/master/src/assets/print3.png?raw=true" />
+<img height="400" src="https://github.com/pedro-candido/store/blob/master/src/assets/print4.png?raw=true" />
 </p>
 Olá pessoal, espero que estejam muito bem!
 
