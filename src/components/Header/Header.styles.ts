@@ -1,5 +1,7 @@
 import styled from 'styled-components/native';
 
+import { Logo } from '@/assets';
+
 export const IconContainer = styled.View`
   width: 50px;
   justify-content: center;
@@ -13,6 +15,7 @@ export const SafeContainer = styled.SafeAreaView`
 
 export const CartContainer = styled.View`
   justify-content: center;
+  position: 'relative';
 `;
 
 export const RedPoint = styled.View`
@@ -23,4 +26,8 @@ export const RedPoint = styled.View`
   height: 10px;
   position: absolute;
   border-radius: 100px;
+`;
+
+export const StyledLogo = styled(Logo)`
+  width: 150px;
 `;
