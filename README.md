@@ -1,8 +1,8 @@
 ## Introdução
 
-<div style="background-color: #fff">
+<p align="center">
 <img src="https://github.com/pedro-candido/store/blob/master/src/assets/Logo.png?raw=true" />
-</div>
+</p>
 Olá pessoal, espero que estejam muito bem!
 
 Este projeto tem a intenção de validar meus conhecimentos perante o React Native.
