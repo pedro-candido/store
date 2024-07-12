@@ -18,5 +18,6 @@ module.exports = {
     '!**/jest.setup.js',
     '!App.tsx',
     '!.storybook/**/*',
+    '!**/stories/**',
   ],
 };

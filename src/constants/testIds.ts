@@ -3,6 +3,7 @@ const testIds = {
   removeFromCartButton: 'remove-from-cart-button',
   productTestId: 'product-',
   backButton: 'back-button',
+  cartButton: 'cart-button',
 };
 
 export { testIds };

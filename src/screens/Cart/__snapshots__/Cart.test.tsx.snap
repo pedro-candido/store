@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Cart should copy screen 1`] = `
+<View
+  style={
+    {
+      "height": "95%",
+      "justifyContent": "center",
+      "width": "100%",
+    }
+  }
+>
+  <Text
+    style={
+      [
+        {
+          "fontFamily": "Gabarito-regular",
+        },
+        {
+          "fontFamily": "Gabarito-Medium",
+          "fontSize": 16,
+        },
+      ]
+    }
+  >
+    Ops, não há produtos
+  </Text>
+</View>
+`;

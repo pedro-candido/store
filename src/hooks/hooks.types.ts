@@ -24,6 +24,7 @@ export interface IUseProducts {
   getProducts: () => Promise<{
     success: boolean;
   }>;
+  error: boolean;
   getOneProduct: (productId: string) => Promise<AxiosResponse<TProduct>>;
   sortAllProducts: () => Promise<AxiosResponse<TProduct[]>>;
   getAllCategories: () => Promise<AxiosResponse<TProduct[]>>;

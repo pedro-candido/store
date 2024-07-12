@@ -4,9 +4,7 @@ import { fireEvent, render, screen } from '@testing-library/react-native';
 
 import { testIds } from '@/constants/testIds';
 
-import Products from './';
-
-const { cartButton } = testIds;
+import Cart from './';
 
 const mockedNavigate = jest.fn;
 
@@ -24,9 +22,9 @@ jest.mock('@react-navigation/native', () => {
   };
 });
 
-describe('Products', () => {
+describe('Cart', () => {
   it('should copy screen', () => {
-    const testrenderer = render(<Products />);
+    const testrenderer = render(<Cart />);
 
     expect(testrenderer.toJSON()).toMatchSnapshot();
   });

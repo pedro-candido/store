@@ -8,18 +8,17 @@ import { render, fireEvent, screen } from '@testing-library/react-native';
 import { testIds } from '@constants/testIds';
 import { LoggedRouters } from '@routes/LoggedRouters';
 
-import HeaderLeftItem from './';
+import HeaderRightItem from './';
 
-const { backButton } = testIds;
-
-const mockedGoBack = jest.fn();
+const { cartButton } = testIds;
+const mockedNavigate = jest.fn();
 
 const Stack = createStackNavigator();
 
 jest.mock('@react-navigation/native', () => ({
   ...jest.requireActual('@react-navigation/native'),
   useNavigation: () => ({
-    goBack: mockedGoBack,
+    navigate: mockedNavigate,
   }),
 }));
 
@@ -28,19 +27,19 @@ const Component = () => <View>Cart Screen</View>;
 const MockNavigator = () => (
   <NavigationContainer>
     <Stack.Navigator initialRouteName={'TestScreen'}>
-      <Stack.Screen name="TestScreen" component={HeaderLeftItem} />
+      <Stack.Screen name="TestScreen" component={HeaderRightItem} />
       <Stack.Screen name={LoggedRouters.CART} component={Component} />
     </Stack.Navigator>
   </NavigationContainer>
 );
 
-describe('HeaderLeftItem', () => {
+describe('HeaderRightItem', () => {
   it('navigates to CART when pressed', () => {
     render(<MockNavigator />);
 
-    const button = screen.getByTestId(backButton); // Adjust test ID as needed
+    const button = screen.getByTestId(cartButton); // Adjust test ID as needed
     fireEvent.press(button);
 
-    expect(mockedGoBack).toHaveBeenCalled();
+    expect(mockedNavigate).toHaveBeenCalled();
   });
 });

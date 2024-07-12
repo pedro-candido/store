@@ -12,7 +12,7 @@ function Header({ RightIcon, LeftIcon }: IHeader) {
   return (
     <SafeContainer>
       <IconContainer>{LeftIcon ?? <></>}</IconContainer>
-      <Logo />
+      <Logo width={'150px'} />
       <IconContainer>{RightIcon ?? <></>}</IconContainer>
     </SafeContainer>
   );

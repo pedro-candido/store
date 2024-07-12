@@ -6,6 +6,7 @@ import { TProductsChosen } from '@store/products.store';
 
 function useProducts(): IUseProducts {
   const [products, setProducts] = useState([]);
+  const [error, setError] = useState(false);
 
   useEffect(() => {
     getProducts();
@@ -13,12 +14,13 @@ function useProducts(): IUseProducts {
 
   async function getProducts() {
     try {
-      console.warn('products');
       const { data } = await api.get('/products');
       setProducts(data);
+      setError(false);
       return { success: true };
     } catch (err) {
       console.log(err);
+      setError(true);
       return { success: false };
     }
   }
@@ -49,6 +51,7 @@ function useProducts(): IUseProducts {
 
   return {
     getProducts,
+    error,
     getOneProduct,
     getAllCategories,
     sortAllProducts,
