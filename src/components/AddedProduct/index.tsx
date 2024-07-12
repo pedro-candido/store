@@ -1,5 +1,3 @@
-import { useNavigation } from '@react-navigation/core';
-
 import { Container, Picture, StyledButton } from '@components/AddedProduct/AddedProduct.styles';
 import Label from '@components/Label';
 import { useStore } from '@store/globalStore';

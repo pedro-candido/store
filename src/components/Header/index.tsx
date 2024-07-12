@@ -1,7 +1,15 @@
 import React from 'react';
 
+import LottieView from 'lottie-react-native';
+
 import { Logo } from '@/assets';
-import { IconContainer, SafeContainer } from '@components/Header/Header.styles';
+import {
+  CartContainer,
+  IconContainer,
+  RedPoint,
+  SafeContainer,
+} from '@components/Header/Header.styles';
+import { useStore } from '@store/globalStore';
 
 interface IHeader {
   RightIcon?: React.ReactNode;
@@ -9,11 +17,20 @@ interface IHeader {
 }
 
 function Header({ RightIcon, LeftIcon }: IHeader) {
+  const { productsChosen } = useStore();
+
   return (
     <SafeContainer>
       <IconContainer>{LeftIcon ?? <></>}</IconContainer>
       <Logo width={'150px'} />
-      <IconContainer>{RightIcon ?? <></>}</IconContainer>
+      <CartContainer
+        style={{
+          position: 'relative',
+        }}
+      >
+        <IconContainer>{RightIcon ?? <></>}</IconContainer>
+        {RightIcon && productsChosen.length > 0 && <RedPoint />}
+      </CartContainer>
     </SafeContainer>
   );
 }

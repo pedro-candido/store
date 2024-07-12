@@ -1,14 +1,20 @@
 import AddedProductsList from '@components/AddedProductsList';
-import { Container, Title } from '@screens/Cart/Cart.styles.ts';
+import { Container, ContainerWithoutItems, Title } from '@screens/Cart/Cart.styles.ts';
 import { useStore } from '@store/globalStore';
 
 function Cart() {
   const { productsChosen } = useStore();
 
+  if (productsChosen.length === 0) {
+    return (
+      <ContainerWithoutItems>
+        <Title>Ops, parece que você não escolheu nenhum produto</Title>
+      </ContainerWithoutItems>
+    );
+  }
   return (
     <Container>
-      {productsChosen.length === 0 && <Title>Ops, não há produtos</Title>}
-      {productsChosen.length !== 0 && <AddedProductsList />}
+      <AddedProductsList />
     </Container>
   );
 }

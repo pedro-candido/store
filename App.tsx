@@ -2,9 +2,9 @@ import React, { useEffect } from 'react';
 
 import { useFonts } from 'expo-font';
 import * as SplashScreen from 'expo-splash-screen';
-import { ThemeProvider } from 'styled-components';
 
 import Routes from '@routes/Routes';
+SplashScreen.preventAutoHideAsync();
 
 SplashScreen.preventAutoHideAsync();
 

@@ -22,7 +22,7 @@ jest.mock('@store/globalStore', () => ({
   }),
 }));
 
-jest.mock('@hooks/useProducts', () => ({
+jest.mock('@hooks/useProducts/useProducts', () => ({
   useProducts: () => ({
     hasProductOnCart: mockedHasProduct,
   }),

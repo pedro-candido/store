@@ -12,7 +12,7 @@ import {
   Wrapper,
 } from '@components/Product/Product.styles';
 import { testIds } from '@constants/testIds';
-import { useProducts } from '@hooks/useProducts';
+import { useProducts } from '@hooks/useProducts/useProducts';
 import { useStore } from '@store/globalStore';
 import { convertNumberToDollar } from '@utils/formatter';
 

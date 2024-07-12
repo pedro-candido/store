@@ -1,1 +1,2 @@
-export { default as useCart } from './useCart/useCart';
+export { useCart } from './useCart/useCart';
+export { useProducts } from './useProducts/useProducts';
