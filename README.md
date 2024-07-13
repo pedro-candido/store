@@ -29,7 +29,7 @@ Segue lista das bibliotecas principais utilizadas no app para a realização:
 
 ## Escolha das Libs
 
-- Expo: foi escolhida para agilizar o desenvolvimento sendo uma recomendação do próprio react-antive utilizar um framework como expo.
+- Expo: foi escolhida para agilizar o desenvolvimento sendo uma recomendação do próprio react-native utilizar um framework como expo.
 - Axios: Foi escolhido o axios tendo em mente que é uma lib que tenho mais conhecimento, além de ser de fácil utilização.
 - Styled-components: Foi escolhido o styled-components pois é a tecnologia de estilos que eu já utilizo no dia a dia, agilizando a parte de desenvolvimento.
 - FlashList: Há alguns estudos referente a FlashList vs FlatList mostrando os ganhos de performance em momentos de renderização de listas. Exemplo: https://shopify.engineering/instant-performance-upgrade-flatlist-flashlist
