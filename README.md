@@ -86,7 +86,7 @@ Segue imagem com conteúdo representado.
     yarn
 
     // Apenas rode se for utilizar o iOS
-    clean:ios
+    yarn clean:ios
    ```
 
 3. Instale os builds nos respectivos emuladores.
@@ -94,7 +94,7 @@ Segue imagem com conteúdo representado.
    yarn android
    yarn ios
    ```
-DX
+
 ## Para utilizar o storybook
 
 1. Vá para o arquivo `./App.tsx` e troque o return
