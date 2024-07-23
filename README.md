@@ -59,7 +59,7 @@ Atuei em alguns projetos durante minha carreira, com organizações diferentes, 
 
 Segue imagem com conteúdo representado.
 
-<img src="https://raw.githubusercontent.com/pedro-candido/store/b5c834e418cbfabd59480c9b569f4c28d27a0cd2/src/assets/organization.svg"/>
+<img src="https://raw.githubusercontent.com/pedro-candido/store/c963ca3c75d0ddfb21e3daac55d7434e4f4f8a25/src/assets/organization.svg"/>
 
 
 ## Setup
