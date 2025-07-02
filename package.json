@@ -82,6 +82,7 @@
     "typescript-eslint": "^7.16.0"
   },
   "private": true,
+  "sideEffects": false,
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
